@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import appLogo from "../../assets/vite.svg";
+import appLogo from "../../assets/logo-transparent.png";
 import { useState, useEffect, useRef } from 'react';
 
 function Navbar() {
@@ -34,8 +34,8 @@ function Navbar() {
     <>
       <nav className="navbar">
         <div className="left-content">
-          <img src={appLogo} alt="logo" />
-          <h3>LokeySafe</h3>
+          <img className="logo-img" src={appLogo} alt="logo" />
+          <h3>LockeySafe</h3>
         </div>
         <main className="main-content">
           <input
