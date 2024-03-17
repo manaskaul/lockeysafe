@@ -1,4 +1,6 @@
 .navbar {
+  --nav-circle-width: 35px;
+  --nav-circle-height: 35px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -27,8 +29,8 @@
     .avatar {
       border: 1px solid var(--outline-color);
       border-radius: 50%;
-      height: 35px;
-      width: 35px;
+      height: var(--nav-circle-width);
+      width:var(--nav-circle-height);
       cursor: pointer;
       position: relative;
       display: inline-block;
@@ -56,5 +58,10 @@
 
   .avatar-content {
     display: block;
+  }
+
+  .logo-img {
+    height: var(--nav-circle-width);
+    width:var(--nav-circle-height);
   }
 }
