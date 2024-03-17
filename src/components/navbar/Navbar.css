@@ -1,10 +1,12 @@
 .navbar {
+  --nav-circle-width: 35px;
+  --nav-circle-height: 35px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: var(--xs-size);
-  box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
 
   .left-content {
     display: flex;
@@ -27,9 +29,39 @@
     .avatar {
       border: 1px solid var(--outline-color);
       border-radius: 50%;
-      height: 35px;
-      width: 35px;
+      height: var(--nav-circle-width);
+      width:var(--nav-circle-height);
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
       cursor: pointer;
     }
+  }
+
+  .avatar-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    orientation: landscape;
+    top: 50px;
+    left: -100px;
+  }
+
+  .avatar-content a {
+    color: black;
+    padding: var(--s-size) var(--m-size);
+    text-decoration: none;
+    display: block;
+  }
+
+  .avatar-content {
+    display: block;
+  }
+
+  .logo-img {
+    height: var(--nav-circle-width);
+    width:var(--nav-circle-height);
   }
 }
