@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import appLogo from "../../assets/logo-transparent.png";
+import appLogo from "../../assets/logo/svg/logo-no-background.svg";
 import { useState, useEffect, useRef } from 'react';
 
 function Navbar() {
