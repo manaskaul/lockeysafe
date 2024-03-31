@@ -1,7 +1,11 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  /* font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 400; */
 
   /* color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -29,10 +33,23 @@
   --accent-light: #ad88c6;
   --accent-dark: #7469b6;
   --outline-color: #c2c2c2;
+  --font-color: #ffffff;
+  --font-dark-color: #000000;
 }
 
-body {
+body,
+input,
+button,
+select,
+option,
+textarea {
   margin: 0;
+  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 h1,
@@ -42,4 +59,9 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+button,
+a {
+  cursor: pointer;
 }
