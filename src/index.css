@@ -49,6 +49,7 @@ textarea {
     EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
     "Noto Sans", sans-serif;
   line-height: 1.5;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -64,4 +65,8 @@ h6 {
 button,
 a {
   cursor: pointer;
+}
+
+a {
+  color: #4089ff;
 }

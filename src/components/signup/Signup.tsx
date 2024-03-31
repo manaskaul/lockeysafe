@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Signup.css";
+import Navbar from "../navbar/Navbar";
 
 export interface SignupUser {
   firstName: string;
@@ -27,65 +28,70 @@ export default function Signup() {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   return (
-    <div className="signup-container">
-      <h3 className="heading">REGISTER</h3>
-      <div className="form">
-        <input
-          type="text"
-          onChange={(e) => setFirstName(e.target.value)}
-          placeholder="First Name"
-          className="input-field"
-        />
-        <input
-          type="text"
-          onChange={(e) => setLastName(e.target.value)}
-          placeholder="Last Name"
-          className="input-field"
-        />
-        <input
-          type="text"
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-          className="input-field"
-        />
-        <input
-          type="text"
-          onChange={(e) => setUsername(e.target.value)}
-          placeholder="Username"
-          className="input-field"
-        />
-        <input
-          type="password"
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-          className="input-field"
-        />
-        <input
-          type="password"
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          placeholder="Confirm Password"
-          className="input-field"
-        />
-        <button
-          type="button"
-          className="submit-btn"
-          onClick={() =>
-            registerUser({
-              firstName,
-              lastName,
-              email,
-              username,
-              password,
-              confirmPassword,
-            })
-          }
-        >
-          Login
-        </button>
+    <div className="signup">
+      <Navbar></Navbar>
+      <div className="card">
+        <div className="container">
+          <h3 className="heading">REGISTER</h3>
+          <div className="form">
+            <input
+              type="text"
+              onChange={(e) => setFirstName(e.target.value)}
+              placeholder="First Name"
+              className="input-field"
+            />
+            <input
+              type="text"
+              onChange={(e) => setLastName(e.target.value)}
+              placeholder="Last Name"
+              className="input-field"
+            />
+            <input
+              type="text"
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email"
+              className="input-field"
+            />
+            <input
+              type="text"
+              onChange={(e) => setUsername(e.target.value)}
+              placeholder="Username"
+              className="input-field"
+            />
+            <input
+              type="password"
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Password"
+              className="input-field"
+            />
+            <input
+              type="password"
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              placeholder="Confirm Password"
+              className="input-field"
+            />
+            <button
+              type="button"
+              className="submit-btn"
+              onClick={() =>
+                registerUser({
+                  firstName,
+                  lastName,
+                  email,
+                  username,
+                  password,
+                  confirmPassword,
+                })
+              }
+            >
+              Login
+            </button>
+          </div>
+          <span>
+            Already have an account? <a onClick={goToLogin}>Login instead.</a>
+          </span>
+        </div>
       </div>
-      <span>
-        Already have an account? <a onClick={goToLogin}>Login instead.</a>
-      </span>
     </div>
   );
 }
