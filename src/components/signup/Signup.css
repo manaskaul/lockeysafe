@@ -1,7 +1,8 @@
 .signup-container {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
+  max-width: 800px;
+  min-width: 450px;
   align-self: center;
   gap: 16px;
   border: 1px solid var(--outline-color);
