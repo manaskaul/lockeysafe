@@ -1,14 +1,10 @@
 import { useState } from "react";
 import { SignupUser } from "../../interfaces/signup-user";
-import Navbar from "../navbar/Navbar";
 import "./Signup.css";
+import { Link } from "react-router-dom";
 
 function registerUser(user: SignupUser) {
   console.log({ user });
-}
-
-function goToLogin() {
-  console.log("login");
 }
 
 export default function Signup() {
@@ -21,7 +17,6 @@ export default function Signup() {
 
   return (
     <div className="signup">
-      <Navbar></Navbar>
       <div className="card">
         <div className="container">
           <h3 className="heading">REGISTER</h3>
@@ -80,7 +75,7 @@ export default function Signup() {
             </button>
           </div>
           <span>
-            Already have an account? <a onClick={goToLogin}>Login instead.</a>
+            Already have an account? <Link to={"/login"}>Login</Link>
           </span>
         </div>
       </div>
