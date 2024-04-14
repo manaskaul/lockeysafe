@@ -1,15 +1,7 @@
 import { useState } from "react";
-import "./Signup.css";
+import { SignupUser } from "../../interfaces/signup-user";
 import Navbar from "../navbar/Navbar";
-
-export interface SignupUser {
-  firstName: string;
-  lastName: string;
-  email: string;
-  username: string;
-  password: string;
-  confirmPassword: string;
-}
+import "./Signup.css";
 
 function registerUser(user: SignupUser) {
   console.log({ user });
