@@ -1,10 +1,20 @@
 .home {
+  display: flex;
   height: 100%;
   width: 100%;
 
   .shell {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    /* flex: 1; */
+  }
+
+  a,
+  u {
+    text-decoration: none;
+  }
+
+  a:not(:first-child)::before {
+    content: " > ";
   }
 }
