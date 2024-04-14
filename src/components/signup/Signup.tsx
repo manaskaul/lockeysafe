@@ -1,11 +1,8 @@
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../hooks/use-auth";
 import { SignupUser } from "../../interfaces/signup-user";
 import "./Signup.css";
-import { Link } from "react-router-dom";
-
-function registerUser(user: SignupUser) {
-  console.log({ user });
-}
 
 export default function Signup() {
   const [firstName, setFirstName] = useState("");
@@ -14,6 +11,15 @@ export default function Signup() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+
+  const { setUserLogin } = useAuth();
+  const navigate = useNavigate();
+
+  function registerUser(user: SignupUser) {
+    setUserLogin(true);
+    console.log({ user });
+    navigate("/");
+  }
 
   return (
     <div className="signup">
@@ -71,7 +77,7 @@ export default function Signup() {
                 })
               }
             >
-              Login
+              Signup
             </button>
           </div>
           <span>

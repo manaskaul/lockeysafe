@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Login.css";
+import { useAuth } from "../../hooks/use-auth";
 
 export interface SigninUser {
   username: string;
@@ -13,7 +14,10 @@ export default function Login() {
   const [usernameError, setUserNameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
 
+  const { setUserLogin } = useAuth();
+
   function signInUser(user: SigninUser) {
+    setUserLogin(true);
     console.log({ user });
   }
 
@@ -70,7 +74,7 @@ export default function Login() {
             </button>
           </div>
           <span>
-            Don't have an account? <Link to={"/signup"}>Signup.</Link>
+            Don't have an account? <Link to={"/signup"}>Signup</Link>
           </span>
         </div>
       </div>
