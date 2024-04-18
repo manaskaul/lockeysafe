@@ -1,5 +1,4 @@
 import "./Navbar.css";
-import appLogo from "../../assets/logo/svg/logo-no-background.svg";
 import { useState, useEffect, useRef } from "react";
 import { useAuth } from "../../hooks/use-auth";
 
@@ -40,7 +39,11 @@ function Navbar() {
     <>
       <nav className="navbar">
         <div className="left-content">
-          <img className="logo-img" src={appLogo} alt="logo" />
+          <img
+            className="logo-img"
+            src="/assets/logo/svg/logo-no-background.svg"
+            alt="logo"
+          />
           <h3>LockeySafe</h3>
         </div>
         {isLoggedIn && (
