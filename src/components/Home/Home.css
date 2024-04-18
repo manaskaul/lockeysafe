@@ -6,15 +6,8 @@
   .shell {
     display: flex;
     flex-direction: column;
-    /* flex: 1; */
-  }
-
-  a,
-  u {
-    text-decoration: none;
-  }
-
-  a:not(:first-child)::before {
-    content: " > ";
+    flex: 1;
+    box-sizing: border-box;
+    margin: var(--xs-size);
   }
 }
